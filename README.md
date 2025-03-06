@@ -91,8 +91,20 @@ However, there is another folder: `Assets > Prefabs > Optional` that contain a n
 
 These prefabs lend themselves to puzzle gameplay, but can also be used to create additional combat, environmental or platforming experiences. It's up to you to experiment and find what works!
 
+To get familiar with these prefabs, drop a `TriggerDoor` into your level. By default, this door won't do anything: it's waiting for something to trigger it. Between the plaayer and the door, place a `PressurePad`. In the inspector for the Pressure Pad, the `Pressure Pad (Script)` component allows you to trigger different events when the pad is stood on (OnPressed()) and when stepped off (OnRelease()).
+
+Drag-and-drop the TriggerDoor (in your scene) into a new object slot for the OnPressed() condition. From the Function drop-down, select Animator > Play (string), then type "DoorOpening". See below:
+
+![Setting the door to open in the inspector.](images/triggerdoor.png)
+
+Do the same for OnRelease(), changing the entered string from "DoorOpening" to "DoorClosing".
+
+If all goes well, the door should now open when the player steps on the pad, and close when they step off.
+
+![Trigger Door and Pushpad Example.](images/doorandpadexample.gif)
+
 ### Finding the fun
-Using the Prefab Reference Guide, continue your experimentations and building your testing grounds to include additional prefabs and combinations. As before, try different combinations (what happens when a block falls on a monster? Can it be used to activate doors?), and consider the kind of experience that you want for your player.
+Using the Prefab Reference Guide and what you've done so far, continue your experimentations and building your testing grounds to include additional prefabs and combinations. As before, try different combinations (what happens when a block falls on a monster? Can it be used to activate doors?), and consider the kind of experience that you want for your player.
 
 ## Task 6 - Playing each other's toys (10 min)
 Once you're happy with your testing grounds, invite another student to play around in it. Afterwards, ask them what they found fun about it - did they get the same kind of experience out of it as you, or did they find something else? Return the favour by playing theirs.
